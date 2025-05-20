@@ -5,6 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Mohd Asjad | Portfolio</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
   <script>
     tailwind.config = {
       theme: {
@@ -21,14 +24,28 @@
         }
       }
     };
+    
   </script>
 </head>
 <body class="bg-gray-950 text-white font-sans">
 
+  <!-- Header -->
+  <header class="fixed w-full top-0 z-50 bg-gray-950/80 backdrop-blur-md border-b border-gray-800">
+    <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+      <h1 class="text-2xl font-bold text-indigo-500 tracking-widest">ASJAD</h1>
+      <nav class="space-x-6 text-gray-300 text-sm font-medium">
+        <a href="#about" class="hover:text-indigo-400 transition">About</a>
+        <a href="#skills" class="hover:text-indigo-400 transition">Skills</a>
+        <a href="#projects" class="hover:text-indigo-400 transition">Projects</a>
+        <a href="#contact" class="hover:text-indigo-400 transition">Contact</a>
+      </nav>
+    </div>
+  </header>
+
   <!-- Hero Section -->
-  <section class="min-h-screen flex flex-col md:flex-row items-center justify-center px-6 py-10 animation-fade">
+  <section class="min-h-screen flex flex-col md:flex-row items-center justify-center px-6 py-32 animation-fade">
     <div class="md:w-1/2 mb-6 md:mb-0 text-center md:text-left">
-      <h1 class="text-4xl md:text-5xl font-bold mb-4">Hi, I'm <span class="text-indigo-500">Mohd Asjad</span></h1>
+        <h2 id="typewriter" class="text-4xl md:text-5xl font-bold mb-4 h-16"></h2>
       <p class="text-lg text-gray-400">MCA Student | Backend Developer (Django) | Tech Enthusiast</p>
       <div class="mt-6 space-x-4">
         <a href="https://linkedin.com/in/mohd-asjad-211405228" target="_blank" class="text-indigo-400 hover:underline">LinkedIn</a>
@@ -37,12 +54,12 @@
       </div>
     </div>
     <div class="md:w-1/2 flex justify-center">
-      <img id="profilePic" src="https://via.placeholder.com/250" alt="Profile Picture" class="rounded-full w-64 h-64 object-cover border-4 border-indigo-500 shadow-lg transition-transform hover:scale-105">
+      <img id="profilePic" src="me.jpeg" alt="Profile Picture" class="rounded-full w-64 h-64 object-cover border-4 border-indigo-500 shadow-lg transition-transform hover:scale-105">
     </div>
   </section>
 
   <!-- About -->
-  <section class="px-6 py-12 bg-gray-900 animation-fade">
+  <section id="about" class="px-6 py-20 bg-gray-900 animation-fade">
     <h2 class="text-3xl font-semibold mb-4 text-center">About Me</h2>
     <p class="max-w-4xl mx-auto text-center text-gray-400">
       I'm passionate about technology and backend development using Django. I have a knack for problem-solving and I'm continuously exploring frontend development and machine learning.
@@ -50,7 +67,7 @@
   </section>
 
   <!-- Skills -->
-  <section class="px-6 py-12 animation-fade">
+  <section id="skills" class="px-6 py-20 animation-fade">
     <h2 class="text-3xl font-semibold mb-6 text-center">Skills</h2>
     <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-center text-gray-300">
       <div>Django</div>
@@ -65,44 +82,83 @@
   </section>
 
   <!-- Projects -->
-  <section class="px-6 py-12 bg-gray-900 animation-fade">
-    <h2 class="text-3xl font-semibold mb-6 text-center">Projects</h2>
-    <div class="space-y-6 max-w-5xl mx-auto">
-      <div class="bg-gray-800 p-6 rounded-xl shadow hover:shadow-xl transition">
-        <h3 class="text-xl font-bold">Automated Attendance System</h3>
-        <p class="text-gray-400">Django, OpenCV — Face recognition-based attendance system integrated with CCTV.</p>
-        <a href="https://github.com/mdasjad9151/attendance_system_django_code" target="_blank" class="text-indigo-400 hover:underline">View on GitHub</a>
+  <section id="projects" class="px-6 py-20 bg-gray-900">
+    <h2 class="text-3xl font-semibold mb-12 text-center text-white">Projects</h2>
+  
+    <div class="grid gap-8 max-w-6xl mx-auto grid-cols-1 sm:grid-cols-2 lg:grid-cols-2">
+      
+      <!-- Card Template -->
+      <div class="relative group bg-gray-800 p-6 rounded-xl shadow-md overflow-hidden transform transition duration-300 hover:scale-[1.03] hover:shadow-2xl">
+        <!-- Animated Top Border -->
+        <span class="absolute top-0 left-0 w-0 h-1 bg-indigo-400 group-hover:w-full transition-all duration-500 ease-out"></span>
+  
+        <!-- Layer 1: Title -->
+        <div class="mb-3">
+          <h3 class="text-2xl font-bold text-white">Automated Attendance System</h3>
+        </div>
+  
+        <!-- Layer 2: Technologies -->
+        <div class="mb-3">
+          <p class="text-sm font-medium text-indigo-300">Django, OpenCV</p>
+        </div>
+  
+        <!-- Layer 3: Description and Link -->
+        <div>
+          <p class="text-gray-400 mb-3">Face recognition-based attendance system integrated with CCTV.</p>
+          <a href="https://github.com/mdasjad9151/attendance_system_django_code" target="_blank" class="text-indigo-400 hover:underline">View on GitHub</a>
+        </div>
       </div>
-      <div class="bg-gray-800 p-6 rounded-xl shadow hover:shadow-xl transition">
-        <h3 class="text-xl font-bold">Loan Approval Prediction</h3>
-        <p class="text-gray-400">Scikit-learn, Pandas — Predictive model for loan approvals using ensemble learning.</p>
-        <a href="https://github.com/mdasjad9151/loan_approval" target="_blank" class="text-indigo-400 hover:underline">View on GitHub</a>
+  
+      <!-- Repeat the same structure for each project -->
+  
+      <div class="relative group bg-gray-800 p-6 rounded-xl shadow-md overflow-hidden transform transition duration-300 hover:scale-[1.03] hover:shadow-2xl">
+        <span class="absolute top-0 left-0 w-0 h-1 bg-indigo-400 group-hover:w-full transition-all duration-500 ease-out"></span>
+        <div class="mb-3">
+          <h3 class="text-2xl font-bold text-white">Loan Approval Prediction</h3>
+        </div>
+        <div class="mb-3">
+          <p class="text-sm font-medium text-indigo-300">Scikit-learn, Pandas</p>
+        </div>
+        <div>
+          <p class="text-gray-400 mb-3">Predictive model for loan approvals using ensemble learning.</p>
+          <a href="https://github.com/mdasjad9151/loan_approval" target="_blank" class="text-indigo-400 hover:underline">View on GitHub</a>
+        </div>
       </div>
-      <div class="bg-gray-800 p-6 rounded-xl shadow hover:shadow-xl transition">
-        <h3 class="text-xl font-bold">GymConnect</h3>
-        <p class="text-gray-400">Django, Tailwind — Platform for booking gyms, joining workouts, reading trainer blogs.</p>
-        <a href="https://github.com/mdasjad9151/gymConnect" target="_blank" class="text-indigo-400 hover:underline">View on GitHub</a>
+  
+      <div class="relative group bg-gray-800 p-6 rounded-xl shadow-md overflow-hidden transform transition duration-300 hover:scale-[1.03] hover:shadow-2xl">
+        <span class="absolute top-0 left-0 w-0 h-1 bg-indigo-400 group-hover:w-full transition-all duration-500 ease-out"></span>
+        <div class="mb-3">
+          <h3 class="text-2xl font-bold text-white">GymConnect</h3>
+        </div>
+        <div class="mb-3">
+          <p class="text-sm font-medium text-indigo-300">Django, Tailwind</p>
+        </div>
+        <div>
+          <p class="text-gray-400 mb-3">Platform for booking gyms, joining workouts, reading trainer blogs.</p>
+          <a href="https://github.com/mdasjad9151/gymConnect" target="_blank" class="text-indigo-400 hover:underline">View on GitHub</a>
+        </div>
       </div>
-      <div class="bg-gray-800 p-6 rounded-xl shadow hover:shadow-xl transition">
-        <h3 class="text-xl font-bold">TalkTime</h3>
-        <p class="text-gray-400">Django Channels, WebSockets — Real-time encrypted chat app with 1-on-1 messaging.</p>
-        <a href="https://github.com/mdasjad9151/TalkTime" target="_blank" class="text-indigo-400 hover:underline">View on GitHub</a>
+  
+      <div class="relative group bg-gray-800 p-6 rounded-xl shadow-md overflow-hidden transform transition duration-300 hover:scale-[1.03] hover:shadow-2xl">
+        <span class="absolute top-0 left-0 w-0 h-1 bg-indigo-400 group-hover:w-full transition-all duration-500 ease-out"></span>
+        <div class="mb-3">
+          <h3 class="text-2xl font-bold text-white">TalkTime</h3>
+        </div>
+        <div class="mb-3">
+          <p class="text-sm font-medium text-indigo-300">Django Channels, WebSockets</p>
+        </div>
+        <div>
+          <p class="text-gray-400 mb-3">Real-time encrypted chat app with 1-on-1 messaging.</p>
+          <a href="https://github.com/mdasjad9151/TalkTime" target="_blank" class="text-indigo-400 hover:underline">View on GitHub</a>
+        </div>
       </div>
+  
     </div>
   </section>
-
-  <!-- Certifications -->
-  <section class="px-6 py-12 animation-fade">
-    <h2 class="text-3xl font-semibold mb-6 text-center">Certifications & Achievements</h2>
-    <ul class="list-disc max-w-xl mx-auto text-gray-400 space-y-2">
-      <li><a href="https://www.coursera.org/account/accomplishments/verify/H7XFQTEKERSS" target="_blank" class="text-indigo-400 hover:underline">Django Web Framework - Coursera</a></li>
-      <li><a href="https://www.udemy.com/certificate/UC-634d49cb-ba30-4eaa-8097-09ad54acf8e5/" target="_blank" class="text-indigo-400 hover:underline">Data Structures and Algorithms - Udemy</a></li>
-      <li>AMUHACKS 2.0 Participant - GDSC AMU</li>
-    </ul>
-  </section>
+  
 
   <!-- Contact -->
-  <section class="px-6 py-12 bg-gray-900 animation-fade">
+  <section id="contact" class="px-6 py-20 animation-fade">
     <h2 class="text-3xl font-semibold mb-6 text-center">Contact</h2>
     <div class="text-center text-gray-400 space-y-2">
       <p>Email: <a href="mailto:asjad.ajic@gmail.com" class="text-indigo-400 hover:underline">asjad.ajic@gmail.com</a></p>
@@ -116,5 +172,25 @@
     class="fixed bottom-6 right-6 bg-indigo-600 hover:bg-indigo-500 text-white px-4 py-2 rounded-full shadow-lg">
     ↑ Top
   </button>
+
+  <script>
+    const text = "Hi, I'm Mohd Asjad";
+    const typeTarget = document.getElementById("typewriter");
+    let index = 0;
+  
+    function typeWriter() {
+      if (index < text.length) {
+        typeTarget.innerHTML += text.charAt(index);
+        index++;
+        setTimeout(typeWriter, 100); // speed
+      }
+    }
+  
+    window.addEventListener('DOMContentLoaded', () => {
+      typeWriter();
+    });
+  </script>
+  
+
 </body>
 </html>
