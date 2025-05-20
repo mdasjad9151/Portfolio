@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mohd Asjad | Portfolio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          animation: {
+            fade: 'fadeIn 1.5s ease-in-out',
+          },
+          keyframes: {
+            fadeIn: {
+              '0%': { opacity: '0', transform: 'translateY(20px)' },
+              '100%': { opacity: '1', transform: 'translateY(0)' },
+            },
+          },
+        }
+      }
+    };
+  </script>
+</head>
+<body class="bg-gray-950 text-white font-sans">
+
+  <!-- Hero Section -->
+  <section class="min-h-screen flex flex-col md:flex-row items-center justify-center px-6 py-10 animation-fade">
+    <div class="md:w-1/2 mb-6 md:mb-0 text-center md:text-left">
+      <h1 class="text-4xl md:text-5xl font-bold mb-4">Hi, I'm <span class="text-indigo-500">Mohd Asjad</span></h1>
+      <p class="text-lg text-gray-400">MCA Student | Backend Developer (Django) | Tech Enthusiast</p>
+      <div class="mt-6 space-x-4">
+        <a href="https://linkedin.com/in/mohd-asjad-211405228" target="_blank" class="text-indigo-400 hover:underline">LinkedIn</a>
+        <a href="https://github.com/mdasjad9151" target="_blank" class="text-indigo-400 hover:underline">GitHub</a>
+        <a href="mailto:asjad.ajic@gmail.com" class="text-indigo-400 hover:underline">Email</a>
+      </div>
+    </div>
+    <div class="md:w-1/2 flex justify-center">
+      <img id="profilePic" src="https://via.placeholder.com/250" alt="Profile Picture" class="rounded-full w-64 h-64 object-cover border-4 border-indigo-500 shadow-lg transition-transform hover:scale-105">
+    </div>
+  </section>
+
+  <!-- About -->
+  <section class="px-6 py-12 bg-gray-900 animation-fade">
+    <h2 class="text-3xl font-semibold mb-4 text-center">About Me</h2>
+    <p class="max-w-4xl mx-auto text-center text-gray-400">
+      I'm passionate about technology and backend development using Django. I have a knack for problem-solving and I'm continuously exploring frontend development and machine learning.
+    </p>
+  </section>
+
+  <!-- Skills -->
+  <section class="px-6 py-12 animation-fade">
+    <h2 class="text-3xl font-semibold mb-6 text-center">Skills</h2>
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-center text-gray-300">
+      <div>Django</div>
+      <div>Python</div>
+      <div>JavaScript</div>
+      <div>HTML/CSS</div>
+      <div>Tailwind</div>
+      <div>OpenCV</div>
+      <div>MySQL/PostgreSQL</div>
+      <div>Git/GitHub</div>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section class="px-6 py-12 bg-gray-900 animation-fade">
+    <h2 class="text-3xl font-semibold mb-6 text-center">Projects</h2>
+    <div class="space-y-6 max-w-5xl mx-auto">
+      <div class="bg-gray-800 p-6 rounded-xl shadow hover:shadow-xl transition">
+        <h3 class="text-xl font-bold">Automated Attendance System</h3>
+        <p class="text-gray-400">Django, OpenCV — Face recognition-based attendance system integrated with CCTV.</p>
+        <a href="https://github.com/mdasjad9151/attendance_system_django_code" target="_blank" class="text-indigo-400 hover:underline">View on GitHub</a>
+      </div>
+      <div class="bg-gray-800 p-6 rounded-xl shadow hover:shadow-xl transition">
+        <h3 class="text-xl font-bold">Loan Approval Prediction</h3>
+        <p class="text-gray-400">Scikit-learn, Pandas — Predictive model for loan approvals using ensemble learning.</p>
+        <a href="https://github.com/mdasjad9151/loan_approval" target="_blank" class="text-indigo-400 hover:underline">View on GitHub</a>
+      </div>
+      <div class="bg-gray-800 p-6 rounded-xl shadow hover:shadow-xl transition">
+        <h3 class="text-xl font-bold">GymConnect</h3>
+        <p class="text-gray-400">Django, Tailwind — Platform for booking gyms, joining workouts, reading trainer blogs.</p>
+        <a href="https://github.com/mdasjad9151/gymConnect" target="_blank" class="text-indigo-400 hover:underline">View on GitHub</a>
+      </div>
+      <div class="bg-gray-800 p-6 rounded-xl shadow hover:shadow-xl transition">
+        <h3 class="text-xl font-bold">TalkTime</h3>
+        <p class="text-gray-400">Django Channels, WebSockets — Real-time encrypted chat app with 1-on-1 messaging.</p>
+        <a href="https://github.com/mdasjad9151/TalkTime" target="_blank" class="text-indigo-400 hover:underline">View on GitHub</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Certifications -->
+  <section class="px-6 py-12 animation-fade">
+    <h2 class="text-3xl font-semibold mb-6 text-center">Certifications & Achievements</h2>
+    <ul class="list-disc max-w-xl mx-auto text-gray-400 space-y-2">
+      <li><a href="https://www.coursera.org/account/accomplishments/verify/H7XFQTEKERSS" target="_blank" class="text-indigo-400 hover:underline">Django Web Framework - Coursera</a></li>
+      <li><a href="https://www.udemy.com/certificate/UC-634d49cb-ba30-4eaa-8097-09ad54acf8e5/" target="_blank" class="text-indigo-400 hover:underline">Data Structures and Algorithms - Udemy</a></li>
+      <li>AMUHACKS 2.0 Participant - GDSC AMU</li>
+    </ul>
+  </section>
+
+  <!-- Contact -->
+  <section class="px-6 py-12 bg-gray-900 animation-fade">
+    <h2 class="text-3xl font-semibold mb-6 text-center">Contact</h2>
+    <div class="text-center text-gray-400 space-y-2">
+      <p>Email: <a href="mailto:asjad.ajic@gmail.com" class="text-indigo-400 hover:underline">asjad.ajic@gmail.com</a></p>
+      <p>Phone: +91 9151701602</p>
+      <p>LeetCode: <a href="https://leetcode.com/u/QuenchLogic/" target="_blank" class="text-indigo-400 hover:underline">QuenchLogic</a></p>
+    </div>
+  </section>
+
+  <!-- Scroll to Top -->
+  <button onclick="window.scrollTo({top: 0, behavior: 'smooth'})"
+    class="fixed bottom-6 right-6 bg-indigo-600 hover:bg-indigo-500 text-white px-4 py-2 rounded-full shadow-lg">
+    ↑ Top
+  </button>
+</body>
+</html>
