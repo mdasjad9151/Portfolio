@@ -25,4 +25,16 @@
                     /* Indigo */
                     font-family: 'Courier New', monospace; 
                 font-weight: 900;      }
-                    
+                
+                                .theme-toggle svg {
+                                    transition: transform 0.4s ease;
+                                }
+                
+                                .theme-toggle:hover svg {
+                                    transform: rotate(20deg);
+                                }
+
+
+
+
+
