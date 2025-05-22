@@ -29,3 +29,16 @@ function typeWriter() {
 }
 
 window.addEventListener("DOMContentLoaded", typeWriter);
+
+
+  // On page load
+  if (localStorage.getItem('theme') === 'dark') {
+    document.documentElement.classList.add('dark');
+  }
+
+  function toggleTheme() {
+    console.log("theme")
+    const isDark = document.documentElement.classList.toggle('dark');
+    console.log(isDark)
+    localStorage.setItem('theme', isDark ? 'dark' : 'light');
+  }
