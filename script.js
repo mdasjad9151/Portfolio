@@ -37,8 +37,8 @@ window.addEventListener("DOMContentLoaded", typeWriter);
   }
 
   function toggleTheme() {
-    console.log("theme")
+
     const isDark = document.documentElement.classList.toggle('dark');
-    console.log(isDark)
-    localStorage.setItem('theme', isDark ? 'dark' : 'light');
+
+    localStorage.setItem('theme', isDark ? 'light' : 'dark');
   }
