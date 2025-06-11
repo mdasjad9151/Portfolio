@@ -1,6 +1,6 @@
 const cylinder = document.getElementById("cylinder");
-const totalImages = 8; // Adjust based on actual count
-const radius = 300; // Distance from center
+const totalImages = 8;
+const radius = 300;
 const faceAngle = 360 / totalImages;
 
 for (let i = 0; i < totalImages; i++) {
@@ -10,16 +10,15 @@ for (let i = 0; i < totalImages; i++) {
   face.style.transform = `rotateY(${angle}deg) translateZ(${radius}px)`;
 
   const img = document.createElement("img");
-  img.src = `gallery/photo${i + 1}.jpeg`; // Adjust path as needed
+  img.src = `gallery/photo${i + 1}.jpeg`;
   img.alt = `Photography ${i + 1}`;
 
   face.appendChild(img);
   cylinder.appendChild(face);
 }
 
-// Optional: Continuous rotation
 let rotation = 0;
 setInterval(() => {
-  rotation += 0.3; // degrees per frame
+  rotation += 0.3;
   cylinder.style.transform = `rotateY(${rotation}deg)`;
 }, 30);

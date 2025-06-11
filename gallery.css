@@ -2,6 +2,12 @@
     perspective: 85rem;
 }
 
+@media (max-width: 400px) {
+    #hobbies .perspective {
+        height: 150px !important;
+    }
+}
+
 .transform-style-preserve-3d {
     transform-style: preserve-3d;
 }
@@ -17,6 +23,22 @@
     border-radius: 12px;
     overflow: hidden;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Medium screens */
+@media (max-width: 768px) {
+    .cylinder-face {
+        width: 180px;
+        height: 150px;
+    }
+}
+
+/* Small screens */
+@media (max-width: 480px) {
+    .cylinder-face {
+        width: 140px;
+        height: 110px;
+    }
 }
 
 .cylinder-face img {
