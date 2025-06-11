@@ -1,7 +1,11 @@
 const cylinder = document.getElementById("cylinder");
 const totalImages = 8;
-const radius = 300;
 const faceAngle = 360 / totalImages;
+
+// Calculate radius based on container width
+const container = cylinder.parentElement;
+const containerWidth = container.offsetWidth;
+const radius = containerWidth *3/4; // adjust proportionally
 
 for (let i = 0; i < totalImages; i++) {
   const angle = i * faceAngle;
@@ -19,6 +23,11 @@ for (let i = 0; i < totalImages; i++) {
 
 let rotation = 0;
 setInterval(() => {
-  rotation += 0.3;
+  rotation += 0.2;
   cylinder.style.transform = `rotateY(${rotation}deg)`;
 }, 30);
+
+// Optional: Recalculate radius on window resize
+window.addEventListener("resize", () => {
+  location.reload(); // Simplest way to reinitialize layout
+});
